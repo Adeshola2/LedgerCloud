@@ -15,8 +15,9 @@
 <div class="container nav-flex">
 
 <h2 class="logo">LedgerCloud</h2>
+<button class="menu-toggle">☰</button>
 
-<nav>
+<nav id="nav-menu">
 <ul>
 <a href="#Home"><li>Home</li></a>
 <a href="#About"><li>About</li></a>
@@ -25,7 +26,7 @@
 </ul>
 </nav>
 
-<button class="btn">Contact us</button>
+<button class="btn" onclick="goToContact()">Contact us</button>
 
 </div>
 </header>
@@ -44,7 +45,7 @@ LedgerCloud is a remote-first accounting firm supporting startups and growing bu
 We deliver streamlined bookkeeping, financial reporting, and compliance solutions designed for modern, borderless operations.
 </p>
 
-<button class="btn">Contact Us</button>
+<button class="btn" onclick="goToContact()">Contact Us</button>
 
 </div>
 
@@ -109,7 +110,7 @@ We deliver streamlined bookkeeping, financial reporting, and compliance solution
       Our accountants keep track of your budget, expenses, financial 
       records, and help you make smarter decisions.
     </p>
-    <button>CONTACT US NOW →</button>
+    <button onclick="goToContact()">CONTACT US NOW →</button>
   </div>
 </section>
 
@@ -245,6 +246,21 @@ We provide expert financial solutions tailored to the unique needs of a diverse 
 </footer>
 
 <script>
+  // Mobile menu toggle
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("#nav-menu");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+// contact scrolling
+function goToContact() {
+  document.getElementById("Contact").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
 function updateCopyright() {
   const year = new Date().getFullYear();
   document.getElementById("copyright").textContent =

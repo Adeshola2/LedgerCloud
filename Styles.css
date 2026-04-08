@@ -59,6 +59,16 @@ color:white;
 text-decoration:none;
 }
 
+/* Hide toggle button on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 
 /* HERO */
 
@@ -323,9 +333,33 @@ grid-template-columns:1fr 1fr;
 
 
 @media (max-width:600px){
+.menu-toggle {
+ display: block;
+}
+
+nav {
+position: absolute;
+top: 70px;
+left: 0;
+width: 100%;
+background: #000053;
+display: none; /* hidden by default */
+transition: all 0.3s ease;
+}
 
 nav ul{
-display:none;
+flex-direction: column;
+gap: 15px;
+padding: 20px;
+}
+
+nav.active {
+display: block; /* show when active */
+}
+
+/* hide contact button on mobile */
+.btn {
+display: none;
 }
 
 .features{

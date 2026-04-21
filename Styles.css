@@ -5,6 +5,10 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
+a{
+text-decoration:none;
+}
+
 .container{
 width:90%;
 max-width:1200px;
@@ -12,6 +16,7 @@ margin:auto;
 }
 
 .btn{
+  display: flex;
 background:#FFC107;
 border:none;
 padding:12px 24px;
@@ -36,6 +41,10 @@ background:#000053;
 color: white;
 padding:20px 0;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.content-nav {
+  display: contents;
 }
 
 .nav-flex{
@@ -67,6 +76,20 @@ text-decoration:none;
   border: none;
   color: white;
   cursor: pointer;
+}
+
+.whatsapp {
+  background-color: #1ebe5d;
+  color: white;
+}
+
+.whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.fa-brands {
+  align-content: center;
+  padding-right: 5px;
 }
 
 
@@ -144,12 +167,6 @@ color:white;
 .feature-card.active a{
 color:white;
 }
-
-/* .feature-card.passive{
-background:#FFC107;
-color:white;
-} */
-
 
 .hero-promo {
 position: relative;
@@ -357,9 +374,15 @@ nav.active {
 display: block; /* show when active */
 }
 
+.content-nav {
+  display: none;
+}
+
 /* hide contact button on mobile */
 .btn {
-display: none;
+ display: inline-block;
+ margin-bottom: 10px;
+ margin-left: 10px;
 }
 
 .features{
@@ -433,6 +456,12 @@ padding-left: 5px;
 }
 
 .contact-info p {
+margin-bottom: 12px;
+font-size: 14px;
+}
+
+.contact-info a {
+  color: white;
 margin-bottom: 12px;
 font-size: 14px;
 }

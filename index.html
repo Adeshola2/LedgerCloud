@@ -17,17 +17,18 @@
 <h2 class="logo">LedgerCloud</h2>
 <button class="menu-toggle">☰</button>
 
-<nav id="nav-menu">
+<nav id="nav-menu" class="content-nav">
 <ul>
 <a href="#Home"><li>Home</li></a>
 <a href="#About"><li>About</li></a>
 <a href="#Services"><li>Services</li></a>
 <a href="#Contact"><li>Contact</li></a>
 </ul>
+<a href="https:wa.me/message/ILMPYS5IKTALB1"
+  class="btn whatsapp" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+  </a>
 </nav>
-
-<button class="btn" onclick="goToContact()">Contact us</button>
-
 </div>
 </header>
 
@@ -233,8 +234,8 @@ We provide expert financial solutions tailored to the unique needs of a diverse 
     <div class="contact-info">
       <h3>Information</h3>
       <p><strong>📞 Phone Number:</strong><br>  08124438793, 07034457844</p>
-      <p><strong><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:17px; height:17px;"> Whatapp Number:</strong><br> 07034457844</p>
-      <p><strong>✉ Email:</strong><br>Theledgercloud@gmail.com </p>
+      <a href="https:wa.me/message/ILMPYS5IKTALB1" target="_blank"><strong><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:17px; height:17px;"> Whatapp Number:</strong><br> 07034457844</a><br>
+      <a href="mailto:theledgercloud@gmail.com"><strong>✉ Email:</strong><br>theledgercloud@gmail.com</a>
     </div>
 
   </div>
@@ -261,11 +262,6 @@ function goToContact() {
   });
 }
 
-function updateCopyright() {
-  const year = new Date().getFullYear();
-  document.getElementById("copyright").textContent =
-    `Copyright © ${year}. All Rights Reserved`;
-}
 document.getElementById("year").textContent = new Date().getFullYear();
 // Run on page load
 updateCopyright();
